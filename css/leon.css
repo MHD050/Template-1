@@ -21,7 +21,9 @@ body {
   --center-transform: translate(-50%, -50%);
 }
 
-/* end global rules */
+/* end global Rules 
+
+ */
 
 /* start header */
 .container {
@@ -31,8 +33,7 @@ body {
   margin-right: auto;
 }
 .header {
-  /* width: 500px; */
-  padding: 20px;
+  padding: 21px;
 }
 .header .container {
   display: flex;
