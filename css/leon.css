@@ -15,7 +15,7 @@ body {
 :root {
   --main-color: #10cab7;
   --secondary-color: #2c4755;
-  --section-backgrounf: #f6f6f6;
+  --section-background: #f6f6f6;
   --main-padding: 60px;
 }
 
@@ -149,7 +149,7 @@ body {
 /* start features */
 .features {
   padding: 60px 0;
-  background-color: var(--section-backgrounf);
+  background-color: var(--section-background);
 }
 .features .container {
   display: grid;
@@ -256,17 +256,22 @@ body {
 }
 /* end services */
 
+html {
+  scroll-behavior: smooth;
+}
 /* start protofolio */
 .protofolio {
-  background-color: var(--section-backgrounf);
+  background-color: var(--section-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
   /* padding: var(--main-padding); */
   /* text-align: center; */
   /* margin: 0; */
 }
+
 .projects {
   margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
   grid-gap: 80px;
 }
 .project {
@@ -282,6 +287,170 @@ body {
 }
 
 /* end protofolio */
+
+/* start About */
+.about {
+  padding-top: var(--main-padding);
+  padding-bottom: 120px;
+}
+.about .container .head {
+  margin-bottom: 90px;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.about-content .text {
+  flex-basis: calc(100% - 500px);
+}
+.about-content .text p:first-child {
+  color: #333;
+  font-weight: bold;
+  line-height: 1.6;
+  margin: 40px 0;
+}
+
+.about-content .text hr {
+  width: 50%;
+  border-color: var(--main-color);
+  margin: 10px 0;
+}
+@media (max-width: 992px) {
+  .about-content .text hr {
+    margin: auto;
+  }
+}
+.about-content .text p:last-child {
+  line-height: 1.6;
+  color: #797979;
+  margin: 40px 0;
+}
+.about-content .image img {
+  height: 100%;
+  width: 240px;
+}
+
+.about-content .image {
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+
+@media (max-width: 992px) {
+  .about-content .image {
+    margin: 0 auto 60px;
+  }
+}
+
+.about-content .image::before {
+  content: "";
+  height: calc(100% + 80px);
+  top: -40px;
+  width: 80px;
+  left: -20px;
+  background-color: #ebeced;
+  position: absolute;
+  z-index: -1;
+}
+
+.about-content .image::after {
+  content: "";
+  height: calc(100% - 73px);
+  top: -40px;
+  width: 100px;
+  right: -150px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  /* background-color: var(--main-color); */
+  position: absolute;
+  z-index: -1;
+}
+@media (max-width: 992px) {
+  .about-content .image::before,
+  .about-content .image::after {
+    display: none;
+  }
+}
+/* end About */
+
+/* start Contact */
+.contact {
+  background-color: var(--section-background);
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  margin: 0;
+}
+.contact .info {
+  margin-top: 80px;
+
+  padding-top: var(--main-padding);
+}
+.contact .info p {
+  color: var(--secondary-color);
+  font-size: 35px;
+  line-height: 1.8;
+  margin: auto;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+.contact .info .link {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 35px;
+  line-height: 1.8;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+@media (max-width: 767px) {
+  .contact .info .link {
+    font-size: 25px;
+  }
+  .contact .info p {
+    font-size: 25px;
+  }
+}
+.contact .info .socail-media {
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+}
+/* end Contact */
+
+/* start footer */
+.footer {
+  background-color: var(--secondary-color);
+}
+.copy-rights {
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 18px;
+  color: white;
+}
+.copy-rights p {
+  font-weight: 600;
+  margin: 0;
+}
+.copy-rights p span {
+  color: var(--main-color);
+  margin: 0 10px;
+  font-weight: bold;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .copy-rights {
+    font-size: 18px;
+  }
+}
+/* end footer */
 @media (max-width: 767px) {
   .special-heading {
     font-size: 60px;
